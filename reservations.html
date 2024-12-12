@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservations</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <h1>Reservations</h1>
+
+    <!-- Sorting Buttons -->
+    <div class="sort-buttons">
+        <a href="{{ url_for('show_data', sort='past') }}" class="button">Past Bookings</a>
+        <a href="{{ url_for('show_data', sort='future') }}" class="button">Future Bookings</a>
+    </div>
+
+    {% if message %}
+    <p class="message">{{ message }}</p>
+    {% endif %}
+
+    <table class="reservation">
+        <tr>
+            <th>ID</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>No. of People</th>
+            <th>No. of Adults</th>
+            <th>No. of Children</th>
+            <th>Booking Site</th>
+            <th>Total Amount</th>
+            <th>Paid (Y/N)</th>
+            <th>Date Paid</th>
+            <th>Comments</th>
+            <th>Actions</th>
+        </tr>
+        {% for reservation in reservation %}
+            <tr>
+                <td>{{ reservation['CustID'] }}</td>
+                <td>{{ reservation['DateOfRes_Start'] }}</td>
+                <td>{{ reservation['DateOfRes_End'] }}</td>
+                <td>{{ reservation['No_Of_People'] }}</td>
+                <td>{{ reservation['No_Adults'] }}</td>
+                <td>{{ reservation['No_Children'] }}</td>
+                <td>{{ reservation['Booking_Site'] }}</td>
+                <td>{{ reservation['Total_Amount'] }}</td>
+                <td>{{ reservation['Paid_Y_N'] }}</td>
+                <td>{{ reservation['Date_Paid'] }}</td>
+                <td>{{ reservation['Comments'] }}</td>
+                <td>
+                    <form action="/delete_reservation" method="POST">
+                        <input type="hidden" name="CustID" value="{{ reservation['CustID'] }}">
+                        <input type="submit" value="Delete Reservation">
+                    </form>
+                </td>
+            </tr>
+        {% else %}
+            <tr><td colspan="12">No reservation data found</td></tr>
+        {% endfor %}
+    </table>
+
+    <div class="button-container">
+        <a href="{{ url_for('form') }}" class="button">Add New Reservation</a>
+        <a href="{{ url_for('customers') }}" class="button">View Customers</a>
+        <a href="/" class="button">Home</a>
+    </div>
+</body>
+</html>
+
