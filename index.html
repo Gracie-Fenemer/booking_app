@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Reservation Manager</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 0.5rem 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: url('../static/hero-image.jpg') no-repeat center center/cover;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: navy
+        }
+
+        .buttons {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .buttons a {
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            margin: 0 0.5rem;
+            display: inline-block;
+            font-size: 1rem;
+        }
+
+        .buttons a:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Reservation Manager</h1>
+    </header>
+
+    <nav>
+        <a href="form">New Reservation</a>
+        <a href="show_data">View Reservations</a>
+        <!-- <a href="customers">Manage Customers</a> -->
+    </nav>
+
+    <section class="hero">
+        <h2>Effortlessly Manage Your Reservations</h2>
+        <p>Streamline your booking process, track customers, and stay organized.</p>
+    </section>
+
+    <section class="buttons">
+        <a href="form">Create a Reservation</a>
+        <a href="reservations">See All Reservations</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Reservation Manager. All rights reserved.</p>
+    </footer>
+</body>
+</html>

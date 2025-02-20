@@ -1,0 +1,189 @@
+/* styles.css */
+
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Form Styles */
+form {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Header Styles */
+h2 {
+    color: #333;
+}
+
+/* Label Styles */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+
+}
+
+/* Submit Button Styles */
+input[type="submit"] {
+    background-color: #4CAF50; /* Green */
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049; /* Darker Green */
+}
+
+/* Textarea Styles */
+textarea {
+    height: 100px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+}
+
+form select {
+    width: 100%; /* Make the dropdown take the full width of the form */
+    padding: 10px; /* Add padding for better usability */
+    margin-bottom: 15px; /* Maintain spacing with other elements */
+    border: 1px solid #ddd; /* Match the border with input fields */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Match font size with input fields */
+    transition: border-color 0.3s; /* Add transition for focus state */
+}
+
+/* Dropdown Focus State */
+form select:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.button {
+    display: inline-block;         /* Allows padding and margin */
+    padding: 10px 20px;          /* Padding for button look */
+    background-color: #007BFF;   /* Button background color */
+    color: white;                 /* Text color */
+    text-align: center;           /* Center text */
+    text-decoration: none;        /* Remove underline */
+    border-radius: 5px;          /* Rounded corners */
+    border: none;                 /* Remove border */
+    font-size: 16px;              /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.button:hover {
+    background-color: #0056b3;    /* Darker shade on hover */
+}
+
+.customers {
+    width: 80%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.reservations {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #d9bfbf;
+}
+
+tr:hover {
+    background-color: #96c5ab;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.message {
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.dropdown-message {
+    display: none;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.dropdown-message.active {
+    display: block;
+}
+
+.dropdown-message button {
+    background-color: #f44336;
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+}
+}
